@@ -1,0 +1,389 @@
+Question 61:
+
+//**Line A
+package com.brainbench.TestExamples;
+//**Line B
+import java.io.*;
+//**Line C
+public class DocumentationSample
+{
+//**Line D
+implements Serializable{
+//**Line E
+//..Code not shown...
+}
+In tha above sample code on which line you must place a documentation comment
+ that describes the purpose of the class DocumentationSample?
+A.line A
+B.Line B
+C.Line C
+D.Line D
+E.Line E
+
+ANSWER: C       
+
+
+Question 62:     
+
+Class Mythread extends Thread,Long
+{
+	Static long longId;
+	public void run()
+	{
+		System.out.println("This is my thread");
+	}
+}
+what is the wrong with the subclass of class of class thread in the sample code above?
+A.It must catch the ThreadDeath exception
+B.It cannot have any static methods in the class
+C.It must declare the class final
+D.It cannot subclass any other class
+E.It must implement the ThreadPolicy Interface
+
+Answer: D(Multiple inheritance not allowed)
+
+Question 63:
+public class BrainBench
+{
+	private static final BrainBench foo=new  BrainBench();
+	private BrainBench(){}
+	public static BrainBench getIt()
+	{
+		return foo;
+	}
+	//...static methods of class
+}
+
+A. Factory
+B. Prototype
+C. Proxy
+D. Builder
+E.Singleton
+
+ANSWER: E
+
+ The Singleton pattern ensures that only one instance of a particular class is created per application.
+ This pattern is useful where only one object instance is required, for example, while connecting to a database using only one object that manages the connection.
+ Too many database connection objects are not only difficult to maintain, but also are adverse to performance.
+
+
+64.what is the difference between stringbuffer and stringbuilder class?
+A.StringBuffer changes are thread safe where as StringBuilder are not.
+B. StringBuffer provides method to retreive a substring ,StringBuilder do not.
+C. StringBuffer cannot be passed to the print() method PrintWriter Interface,StringBuilder can be passed
+D. stringBuilder class implements builder design pattern but StringBuffer do not
+E. StringBuffer supports unicode characters,StringBuilder only supports ASCII
+
+ANSWER: A
+(StringBuffer is mutable means one can change the value of the object . 
+The object created through StringBuffer is stored in the heap.
+StringBuffer has the same methods as the StringBuilder , but each method in StringBuffer is synchronized that is StringBuffer is thread safe )
+
+
+ 65. What is the purpose of acquiring an object's monitor by using a synchronized(object){} construct before accessing the object resources
+A. to establish scheduling priority over other threads so that the bytecode interpreter gives more processor time to the synchronised
+B. To ensure that objects accessed on remote machine have their dates expressed in the local time zones.
+C. To prevent a deadlock or race situation from occuring between multiple threads during event handling
+D. To prevent multiple threads from accessing the same resource at the same time which could have the resource in an undefined state.
+E. To prevent flicker on the users screen during updates for more than 80 percent of the display area.
+
+Answer: D
+
+
+66. which one of the following declarations do you use to create a list of string objects
+A. List<String> list=new ArrayList<String>();
+B.List list<String>=new ArrayList<String>();
+C. List<String> list=new List<String>();
+D. List<String> list=new ArrayList<String>;
+E. List list<String> =new List<String>();
+
+ANSWER: A
+
+68. BufferedImage im=new BufferedImage(100,200,BufferedImage.TYPE_INT_RGB));
+      Graphic2D gc=im.createGraphics();
+      where is the origin(0,0) of the image created above?
+A. In the center of the image
+B. In the top left corner
+C. In the top right corner
+D. In the bottom left corner
+E. depends on the affine transform effect
+
+
+ANSWER:B
+
+69.Which one of the following can you define in an interface?
+A. Transient variables
+B. Static methods
+C. final methods
+D. constants
+E.instance variables
+
+ANSWER: D(an interface can contain constant declarations. All constant values defined in an interface are implicitly public, static, and final)
+
+70.which one of the following java.sql.interface do you use to call a SQL stored procedure that takes two input parameters and returns two output parameters?
+A. PreparedStatement
+B. ResultSet
+C. ResultSetMetaData
+D. CallableStatement
+E. Statement
+
+ANSWER: D (CallableStatement in java is used to call stored procedure from java program.
+ Stored Procedures are group of statements that we compile in the database for some task. )
+
+71. what is collator used in java?
+A. To format messages based on locale
+B. to allow more flexible comparision of strings for a given locale
+C. to abstract a list interface
+D. to implement a sorting routine
+E. To allow keys to be created for hashcodes for a locale
+
+ANSWER B
+A collator is essentially an object that knows how to sort and compare strings ------ Collator coll = Collator.getInstance(); 
+						                            Collections.sort(list, coll); 
+
+72. What is the output of the sample code?
+
+public class TestEx {
+static class Ex1 extends Exception{}
+static class Ex2 extends Ex1{}
+static class Ex3 extends Exception{}
+static void method1() throws Ex1,Ex2,Ex3
+{
+	throw new Ex2();
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try
+		{
+			method1();
+		}
+		catch(Ex3 e)
+		{
+			System.out.println("c");
+		}
+		catch(Ex2 e)
+		{
+			System.out.println("b");
+		}
+		catch(Ex1 e)
+		{
+			System.out.println("a");
+		}
+		catch(Exception e)
+		{
+			System.out.println("d");
+		}
+		finally 
+		{
+		System.out.println("f");
+	}
+
+	}
+}
+A. af
+B. baf
+C. bf
+D. cf
+E. df
+
+Answer C
+
+73) which one of the following command line extracts the contents of jar file tools.jar? 
+A. unjar tools.jar
+B. java java.util.zip.Jar-etools.jar
+C. tar fx tools.jar
+D.jar evf tools.jar
+E. jar xf tools.jar
+
+ANSWER:  E
+( Look at the options and arguments in the command:
+
+The x option indicates that you want to extract files from the JAR archive.
+The f options indicates that the JAR file from which files are to be extracted )
+
+
+74.Given in the sample code above, which of the following assignments is legal?
+class Base{}
+class Derived1 extends Base{}
+class Derived2 extends Base{}
+class Test{
+public void main(String args[])
+{
+	Base b=new Base();
+	Derived1 d1=new Derived1();
+	Derived2 d2=new Derived2();
+	//assignments here
+}
+}
+A. d1=b;
+B. d2=d1
+C. d2=b
+D. b=d1
+E. d1=d2
+
+ANSWER: D
+
+
+
+75)which one of the following code fragments returns a string representations of j, where j is an int?
+A. ((Object j).toString())
+B. new Integer.toString()
+C. str(j)
+D. (String)j
+E. new String(j)
+
+
+ANSWER B
+
+76.For the method in the sample code above, which one is the comments do you document the
+parameter in its javadoc, if the description is to be the single word description?
+
+public void aMethod(String args[])
+{........}
+A. @parameter Description
+B. @parameter arg Description
+C. @parameterString arg Description
+D.@param arg descriptor
+E. @param arg Description
+
+ANSWER:E
+
+77.Which one of the following is used to create a scrollable ResultSet?
+
+ANSWER:Connection con=......
+	Statement st=con.createStatement(
+                 ResultSet.TYPE_SCROLL_INSENSITIVE,
+                 ResultSet.CONCUR_UPDATABLE);
+	ResultSet rs = stmt.executeQuery(sql string);
+
+
+
+78.public double SquareRoot(double value) throws ArithmeticExpression
+{
+	if(value>=0)
+		return math.sqrt(value);
+	else
+		throw new ArithmeticException();
+}
+public double function(int x)
+{
+	double y=(double x);
+	y*= -9.0;
+	try
+	{
+		y=SquareRoot(y);
+	}
+	catch(ArithmeticException e)
+	{
+		y/=3;
+	}
+	finally
+	{
+		y+=10;
+	}
+		return y;
+}	
+
+
+A. -37
+B. -27
+C. -17
+D.  9
+E. NAN
+ANSWER: C  
+
+
+79.Which tool is used to generate portable artifact for web services?
+A. rmic
+B. soap
+C. jws
+D. javac
+E. wsgen
+ANSWER: E
+
+80.what is used to get a reference to the system clipboard
+
+The Clipboard class is a repository for a Transferable object and can be used for cut, copy, and paste operations. 
+The system clipboard can be accessed by calling--------->'Toolkit.getDefaultToolkit().getSystemClipboard()'. 
+
+
+81.You are deploying an application via java web start. The JAR files are signed. You want the client to get full system access, 
+when trusted by the user Referring to the scenario above what will you do to the JNLP file? 
+ ANSWER:  <security>
+		<all-permissions/>
+	</security>
+	(Apply the following guidelines to help secure your RIAs(RICH INTERNET APPLICATIONS)
+                   Sign the JAR file of the RIA with a certificate from a recognized certificate authority. For more information, see the Signing and Verifying JAR Files topic.
+                   If the RIA requires access outside of the security sandbox, specify the all-permissions element in the JNLP file for the RIA.
+	 Otherwise, let the RIA default to running in the security sandbox. The ABOVE code snippet shows the all-permissions element in the RIA's JNLP file.)
+
+82. which one of the following CANNOT be used to manage a list of listeners for a javaBean component? 
+
+ANSWER----->AwtEventListenerProxy
+
+83. )you want to send an e-mail to john@example.com from your java program using platform specific tool external the java runtime environment
+ANSWER: mailto("john@example.com")
+
+84.)You are reading an XML file with a SAX parser, and you need create subclasses to handle error classes.
+In this case you choose to select  a super class which serves as the default base class for SAX error handling
+What is the name of the superclass  and the interface it must implement? 
+A. DefaultBaseHandler andContentHandler
+B. DefaultHandler and ContentHandler
+C. DefaultBaseHandler and ErrorHandler
+D. BaseHandler and ErrorHandler
+E. DefaultHandler and ErrorHandler
+
+ANSWER B
+
+85. which one of the following statements is true about Swing components?
+A. an application that uses swing must be written with single threadedcode since swing takes over the console
+B. each swing component takes atleast one additional thread to support its modelviewcontroller Architecture .This extra overhead can lean to resource starvation
+C. multithreaded swing application require a true multi tasking operating syatem such as linux because of the need for advanced event dispatching
+D. while dialog boxes are displayed,swing disables thread context switching to ensure that user interface remains responsive
+
+ANSWER (         )
+
+
+86. what assertion clause do you add to the default clause of the switch block in the sample code 
+      below inorder to catch the condition when season was not one of the given values.
+	switch(season)
+	{
+		case season.Winter:
+			.............
+			break;
+		case season.Spring:
+			.............
+			break;
+		case season.Summer:
+			.............
+			break;
+		case season.Fall:
+			.............
+	}
+A. default: Assertion true:season;
+
+B. default: Assert false:season;
+
+C. default: Assertion false:season;
+
+D. default: throw new AssertionException(season);
+
+E. default: Assert true:season;
+
+
+ANSWER: B
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
